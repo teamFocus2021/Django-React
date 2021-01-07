@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_backend',
-    'rest_framework'
+    'django_backend',               # Add Django App
+    'rest_framework',               # Add DRF
+    'corsheaders',                  # Add CORS
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',                    # Add CORS
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -101,6 +103,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Add CORS
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8000',
+    'http://localhost:3000'
+]
+
+CORS_ALLOW_CREDENTIALS= True
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
