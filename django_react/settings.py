@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -59,7 +60,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'frontend', 'build'), # 경로 변경
+            os.path.join(BASE_DIR, 'react_frontend', 'build'), # 경로 변경
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -75,7 +76,7 @@ TEMPLATES = [
 
 #경로 추가
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend', 'build', 'static'),
+    os.path.join(BASE_DIR, 'react_frontend', 'build', 'static'),
 ]
 
 WSGI_APPLICATION = 'django_react.wsgi.application'
