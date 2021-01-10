@@ -52,6 +52,7 @@
   git submodule update
   npm install
   cd ..
+  pip install -r requirements.txt
   python manage.py runserver react
   ```
 
