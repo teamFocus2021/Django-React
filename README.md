@@ -42,6 +42,20 @@
 </p>
 
 <br>
+  <h3> 📋 Start </h3>
+<br>
+
+  ```
+  git clone https://github.com/teamFocus2021/Django-React.git
+  cd react_frontend
+  git submodule init
+  git submodule update
+  npm install
+  cd ..
+  python manage.py runserver react
+  ```
+
+<br>
 <br>
 <h4 align="center">
   💻 Projected by 💻 <br>
